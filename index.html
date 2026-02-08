@@ -1,217 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cryvion — Research Use Only. Documentation-led RUO operations with controlled processes and traceability." />
+  <meta name="description" content="Cryvion — distributør av RUO-peptider til akademia og laboratorier. Katalog med batch-relatert dokumentasjon." />
   <title>CRYVION</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip" href="#main">Hopp til innhold</a>
 
-  <a class="skip" href="#main">Skip to content</a>
-
-  <header class="header">
-    <div class="wrap header__inner">
-      <div class="brand">
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <div class="brand" aria-label="Cryvion">
         <span class="brand__mark" aria-hidden="true"></span>
         <span class="brand__name">CRYVION</span>
+        <span class="brand__tag">RUO-distribusjon</span>
       </div>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__link" href="#ruo">RUO</a>
-        <a class="nav__link" href="#framework">Framework</a>
-        <a class="nav__link" href="#documentation">Documentation</a>
-        <a class="nav__link" href="#process">Process</a>
-        <a class="nav__link" href="#compliance">Compliance</a>
+      <nav class="nav" aria-label="Meny">
+        <a class="nav__link" href="#katalog">Katalog</a>
+        <a class="nav__link" href="#dokumentasjon">Dokumentasjon</a>
+        <a class="nav__link" href="#levering">Levering</a>
+        <a class="nav__link" href="#kontakt">Kontakt</a>
       </nav>
+
+      <div class="topbar__actions">
+        <button class="iconbtn" type="button" aria-label="Åpne søk" onclick="document.getElementById('q').focus()">
+          <span aria-hidden="true">⌕</span>
+        </button>
+        <button class="iconbtn" type="button" aria-label="Vis kurv (placeholder)" title="Kurv (placeholder)">
+          <span aria-hidden="true">◻</span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main" class="wrap">
-
     <!-- HERO -->
     <section class="hero reveal">
       <div class="hero__grid">
-        <div>
-          <h1 class="hero__title">Research Use Only.</h1>
-          <p class="hero__lead">
-            Cryvion is a private, research- and quality-driven RUO operation built for
-            procedural control, analytical traceability, and long-term operational consistency.
+        <div class="hero__copy">
+          <div class="kicker">Bioteknisk katalog</div>
+          <h1>Distributør av RUO-peptider til akademia og laboratorier.</h1>
+          <p class="lead">
+            Produkter presenteres med teknisk spesifikasjon og batch-relaterte dokumentasjonsreferanser der dette er tilgjengelig.
           </p>
 
-          <div class="hero__meta" aria-label="Key constraints">
-            <div class="pill">RUO only</div>
-            <div class="pill">No human / veterinary use</div>
-            <div class="pill">Documentation-led</div>
+          <div class="hero__bar">
+            <div class="search">
+              <label class="sr" for="q">Søk i katalog</label>
+              <input id="q" type="search" placeholder="Søk: navn, kategori, format…" autocomplete="off" />
+            </div>
+
+            <div class="filters" aria-label="Filter">
+              <button class="chip is-active" type="button" data-filter="all">Alle</button>
+              <button class="chip" type="button" data-filter="peptid">Peptider</button>
+              <button class="chip" type="button" data-filter="fragment">Fragment</button>
+              <button class="chip" type="button" data-filter="kontroll">Kontroll</button>
+            </div>
           </div>
 
-          <div class="hero__actions">
-            <a class="btn" href="#documentation">View documentation structure</a>
-            <a class="btn btn--ghost" href="#ruo">Read RUO statement</a>
+          <div class="hero__meta">
+            <div class="meta">
+              <div class="meta__k">Kanal</div>
+              <div class="meta__v">Akademia / Lab</div>
+            </div>
+            <div class="meta">
+              <div class="meta__k">Dokumentasjon</div>
+              <div class="meta__v">Batch-referanse</div>
+            </div>
+            <div class="meta">
+              <div class="meta__k">Format</div>
+              <div class="meta__v">Lyofilisert / løsning</div>
+            </div>
+          </div>
+
+          <div class="hero__cta">
+            <a class="btn" href="#katalog">Gå til katalog</a>
+            <a class="btn btn--ghost" href="#dokumentasjon">Se dokumentasjonsmodell</a>
           </div>
         </div>
 
-        <aside class="panel" aria-label="Operational note">
-          <div class="panel__label">Operational posture</div>
+        <aside class="hero__panel reveal" aria-label="Panel">
+          <div class="panel__title">Struktur</div>
           <p class="panel__text">
-            Cryvion prioritizes structure before scale, procedural control before tempo,
-            and verifiable documentation over visibility.
+            Nettsiden er utformet som et butikkgrensesnitt med teknisk presentasjon og konsistente produktdata.
           </p>
-          <div class="panel__list" role="list">
-            <div class="panel__item" role="listitem">Batch traceability</div>
-            <div class="panel__item" role="listitem">Third-party verification</div>
-            <div class="panel__item" role="listitem">Failure containment</div>
-            <div class="panel__item" role="listitem">Conservative compliance stance</div>
+          <div class="panel__grid">
+            <div class="stat">
+              <div class="stat__k">COA</div>
+              <div class="stat__v">Referanse</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">Sporbarhet</div>
+              <div class="stat__v">Batch-ID</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">Metode</div>
+              <div class="stat__v">HPLC/MS*</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">Status</div>
+              <div class="stat__v">Katalog</div>
+            </div>
+          </div>
+          <div class="panel__foot muted">
+            * Eksempel på analysemetoder, avhengig av produkt/batch.
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- RUO -->
-    <section id="ruo" class="section reveal">
+    <!-- KATALOG -->
+    <section id="katalog" class="section reveal">
       <div class="section__head">
-        <h2>Research Use Only</h2>
-        <p class="muted">
-          RUO is treated as an operational framework, not a label.
-        </p>
+        <h2>Katalog</h2>
+        <p class="muted">Visningen under er en statisk prototype. Produktdata kan senere kobles til lager/ordre i et separat system.</p>
       </div>
 
-      <div class="card">
-        <p>
-          Cryvion operates exclusively within Research Use Only (RUO). Materials are intended
-          for research and laboratory use and are not provided for human or veterinary application.
-          Cryvion does not provide medical guidance and does not communicate claims related to
-          personal outcomes.
-        </p>
+      <div class="grid" id="productGrid" aria-label="Produktliste">
+        <!-- Product cards (static prototype) -->
+        <article class="card product" data-type="peptid" data-name="CRV-001 alfa peptid lyofilisert">
+          <div class="card__top">
+            <div class="badge">Peptid</div>
+            <div class="sku">CRV-001</div>
+          </div>
+          <h3>CRV-001 — Alfa (lyofilisert)</h3>
+          <p class="muted">Format: lyofilisert · Mengde: 10 mg · Dokumentasjon: COA-ref (placeholder)</p>
+          <div class="card__bottom">
+            <div class="price">NOK 0 <span class="muted">(placeholder)</span></div>
+            <button class="btn btn--small" type="button" aria-label="Se produkt (placeholder)">Se produkt</button>
+          </div>
+        </article>
+
+        <article class="card product" data-type="peptid" data-name="CRV-014 beta peptid løsning">
+          <div class="card__top">
+            <div class="badge">Peptid</div>
+            <div class="sku">CRV-014</div>
+          </div>
+          <h3>CRV-014 — Beta (løsning)</h3>
+          <p class="muted">Format: løsning · Kons.: 5 mg/mL · Dokumentasjon: batch-ref (placeholder)</p>
+          <div class="card__bottom">
+            <div class="price">NOK 0 <span class="muted">(placeholder)</span></div>
+            <button class="btn btn--small" type="button">Se produkt</button>
+          </div>
+        </article>
+
+        <article class="card product" data-type="fragment" data-name="CRV-F03 fragment serie lyofilisert">
+          <div class="card__top">
+            <div class="badge badge--alt">Fragment</div>
+            <div class="sku">CRV-F03</div>
+          </div>
+          <h3>CRV-F03 — Fragment-serie</h3>
+          <p class="muted">Format: lyofilisert · Mengde: 5 mg · Dokumentasjon: metode-ref (placeholder)</p>
+          <div class="card__bottom">
+            <div class="price">NOK 0 <span class="muted">(placeholder)</span></div>
+            <button class="btn btn--small" type="button">Se produkt</button>
+          </div>
+        </article>
+
+        <article class="card product" data-type="kontroll" data-name="CRV-QC01 referanse kontroll standard">
+          <div class="card__top">
+            <div class="badge badge--qc">Kontroll</div>
+            <div class="sku">CRV-QC01</div>
+          </div>
+          <h3>CRV-QC01 — Referanse / kontroll</h3>
+          <p class="muted">Kategori: QC · Bruk: metodereferanse · Dokumentasjon: standard-ref (placeholder)</p>
+          <div class="card__bottom">
+            <div class="price">NOK 0 <span class="muted">(placeholder)</span></div>
+            <button class="btn btn--small" type="button">Se produkt</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty muted" id="emptyState" hidden>
+        Ingen treff i katalogen med valgt filter/søk.
       </div>
     </section>
 
-    <!-- FRAMEWORK -->
-    <section id="framework" class="section reveal">
+    <!-- DOKUMENTASJON -->
+    <section id="dokumentasjon" class="section reveal">
       <div class="section__head">
-        <h2>System framework</h2>
-        <p class="muted">
-          The site is designed as a documentation and verification interface.
-        </p>
-      </div>
-
-      <div class="grid3">
-        <article class="card">
-          <h3>Structure before scale</h3>
-          <p class="muted">
-            Activity is expanded only in line with documented internal capacity and controlled workflow.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Process integrity</h3>
-          <p class="muted">
-            Procedures are defined, recorded, and used to reduce person-dependence and variance.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Verification framework</h3>
-          <p class="muted">
-            Documentation is organized to support traceability, review, and external scrutiny.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- DOCUMENTATION -->
-    <section id="documentation" class="section reveal">
-      <div class="section__head">
-        <h2>Documentation structure</h2>
-        <p class="muted">
-          Examples of the documentation layers used to support batch-level traceability.
-        </p>
+        <h2>Dokumentasjon</h2>
+        <p class="muted">Presentert på en måte som støtter verifiserbarhet uten å eksponere sensitiv operasjonell detalj.</p>
       </div>
 
       <div class="grid2">
         <div class="card">
-          <h3>Certificate of Analysis (COA)</h3>
-          <p class="muted">
-            Batch-linked COA with reference identifiers and core analytical metrics.
-          </p>
+          <h3>COA-referanse</h3>
+          <p class="muted">Batch-koblet dokumentasjonsreferanse knyttet til produktvisning (prototype).</p>
         </div>
-
         <div class="card">
-          <h3>Third-party verification</h3>
-          <p class="muted">
-            Independent lab testing where applicable (e.g., HPLC, MS), recorded per batch.
-          </p>
+          <h3>Batch-ID</h3>
+          <p class="muted">Vises som identifikator i produktdata for intern og ekstern sporbarhetslogikk.</p>
         </div>
-
         <div class="card">
-          <h3>Batch traceability</h3>
-          <p class="muted">
-            Received → stored → handled → dispatched, with controlled separation and labeling.
-          </p>
+          <h3>Analysemetode</h3>
+          <p class="muted">HPLC/MS og relaterte parametere kan listes som referansefelt (avhengig av batch).</p>
         </div>
-
         <div class="card">
-          <h3>Procedural documentation</h3>
-          <p class="muted">
-            Packing, labeling, storage, and handling procedures documented for repeatability.
-          </p>
+          <h3>Metadata</h3>
+          <p class="muted">Format, mengde, lagringsanbefalinger og relevante notater som tekniske felt.</p>
         </div>
-      </div>
-
-      <div class="note">
-        <span class="note__kicker">Implementation note</span>
-        <p class="note__text">
-          Public documentation is presented at a level that supports verification without disclosing
-          sensitive operational detail.
-        </p>
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section id="process" class="section reveal">
+    <!-- LEVERING -->
+    <section id="levering" class="section reveal">
       <div class="section__head">
-        <h2>Operational process</h2>
-        <p class="muted">
-          Early-stage emphasis is controlled execution and documented stability.
-        </p>
-      </div>
-
-      <ol class="steps">
-        <li class="steps__item">
-          <div class="steps__title">Intake & batch registration</div>
-          <div class="steps__text muted">Incoming batches are registered with identifiers and documentation linkage.</div>
-        </li>
-        <li class="steps__item">
-          <div class="steps__title">Controlled storage & separation</div>
-          <div class="steps__text muted">Inventory is organized to prevent mix-ups and reduce handling variance.</div>
-        </li>
-        <li class="steps__item">
-          <div class="steps__title">Packing & labeling procedure</div>
-          <div class="steps__text muted">Packaging workflow follows recorded steps with double-check points.</div>
-        </li>
-        <li class="steps__item">
-          <div class="steps__title">Dispatch & traceability record</div>
-          <div class="steps__text muted">Dispatch events are recorded to preserve batch-level traceability.</div>
-        </li>
-      </ol>
-    </section>
-
-    <!-- COMPLIANCE -->
-    <section id="compliance" class="section reveal">
-      <div class="section__head">
-        <h2>Compliance posture</h2>
-        <p class="muted">
-          Conservative interpretation is selected when ambiguity exists.
-        </p>
+        <h2>Levering</h2>
+        <p class="muted">En nøktern leveringsseksjon uten salgsbudskap.</p>
       </div>
 
       <div class="card">
-        <p>
-          Cryvion is structured to tolerate external review by legal advisors, banks, logistics partners,
-          and public authorities. Documentation consistency, traceability, and controlled communication
-          are treated as operational requirements.
-        </p>
+        <ul class="list">
+          <li><span class="dot" aria-hidden="true"></span>Pakking og merking følger definert prosedyre (høy nivå-beskrivelse).</li>
+          <li><span class="dot" aria-hidden="true"></span>Forsendelse med sporing der dette er tilgjengelig.</li>
+          <li><span class="dot" aria-hidden="true"></span>Dokumentasjonsreferanser knyttes til produkt-/batchdata.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="section reveal">
+      <div class="section__head">
+        <h2>Kontakt</h2>
+        <p class="muted">Kontaktflate kan holdes enkel i første versjon.</p>
+      </div>
+
+      <div class="card contact">
+        <div>
+          <div class="muted small">E-post</div>
+          <div class="mono">contact@cryvion.no</div>
+        </div>
+        <div>
+          <div class="muted small">Organisasjon</div>
+          <div class="mono">Cryvion AS (placeholder)</div>
+        </div>
+        <div>
+          <div class="muted small">Lokasjon</div>
+          <div class="mono">Norge</div>
+        </div>
       </div>
     </section>
 
@@ -219,32 +249,68 @@
       <div class="footer__grid">
         <div>
           <div class="footer__brand">CRYVION</div>
-          <div class="muted">RUO-only operations. Documentation-led. Low-noise interface.</div>
+          <div class="muted">Bioteknisk katalog og distribusjon.</div>
         </div>
-        <div class="footer__links" aria-label="Footer">
-          <a href="#ruo">RUO</a>
-          <a href="#documentation">Documentation</a>
-          <a href="#compliance">Compliance</a>
-          <a href="#framework">Framework</a>
+        <div class="footer__links">
+          <a href="#katalog">Katalog</a>
+          <a href="#dokumentasjon">Dokumentasjon</a>
+          <a href="#kontakt">Kontakt</a>
         </div>
       </div>
       <div class="footer__legal muted">
-        Research Use Only. Not for human or veterinary use.
+        Research Use Only (RUO). Ikke for human eller veterinær anvendelse.
       </div>
     </footer>
-
   </main>
 
   <script>
-    // Subtle reveal-on-scroll (client-side only, no backend).
-    const nodes = document.querySelectorAll('.reveal');
+    // Reveal-on-scroll (subtil, deterministisk)
+    const revealNodes = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries) => {
       for (const e of entries) {
         if (e.isIntersecting) e.target.classList.add('is-visible');
       }
     }, { threshold: 0.12 });
+    revealNodes.forEach(n => io.observe(n));
 
-    nodes.forEach(n => io.observe(n));
+    // Katalog: filter + søk (kun klient-side)
+    const q = document.getElementById('q');
+    const chips = document.querySelectorAll('.chip');
+    const cards = Array.from(document.querySelectorAll('.product'));
+    const emptyState = document.getElementById('emptyState');
+
+    let activeFilter = 'all';
+
+    function normalize(s){ return (s || '').toLowerCase().trim(); }
+
+    function apply(){
+      const term = normalize(q.value);
+      let visibleCount = 0;
+
+      for (const c of cards){
+        const type = c.getAttribute('data-type');
+        const name = normalize(c.getAttribute('data-name'));
+        const filterOk = (activeFilter === 'all') || (type === activeFilter);
+        const searchOk = !term || name.includes(term);
+
+        const show = filterOk && searchOk;
+        c.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+      }
+
+      emptyState.hidden = visibleCount !== 0;
+    }
+
+    chips.forEach(btn => {
+      btn.addEventListener('click', () => {
+        chips.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        activeFilter = btn.getAttribute('data-filter');
+        apply();
+      });
+    });
+
+    q.addEventListener('input', apply);
   </script>
 </body>
 </html>
